@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'url_of_your_github_repo'
+                git branch: 'main', url: 'https://github.com/Lance-Fernandes/Jenkins-Pipeline-Demo.git'
             }
         }
         stage('Install Dependencies') {
@@ -14,7 +14,7 @@ pipeline {
 
         stage('Run Test Script') {
             steps {
-                browserstack(credentialsId: "jenkins_credential_id") {
+                browserstack(credentialsId: "3003f1af-e7f7-470a-aa5e-65f59d19b529") {
                     sh '''
                         browserstack-sdk python3 script.py
                     '''
