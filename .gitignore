@@ -1,0 +1,6 @@
+# FOLEDERS
+env
+log
+
+# FILES
+*.log
